@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@RequestMapping("/kilo")
+@RequestMapping("/kilo")
 public class HelloController {
 
     @GetMapping("/world")
