@@ -1,8 +1,6 @@
 package org.srijan.embarkspring;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/kilo")
@@ -12,5 +10,10 @@ public class HelloController {
     public String helloWorld() {
         System.out.println("Hello World");
         return "Hello World";
+    }
+
+    @PostMapping("/hey")
+    public String hey(@RequestBody String name) {
+        return "Hey " + name +"!";
     }
 }
